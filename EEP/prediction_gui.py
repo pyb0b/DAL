@@ -77,10 +77,10 @@ class PredictionsWindow(tk.Tk):
                     if response.status_code == 200:
                         if "error" in response.json():
                             self.text_var_cancer_pred.set("error, try again")
-                            self.label_text_cancer_pred.fg = "red"
+                            self.label_text_cancer_pred["fg"] = "red"
                         else:
                             self.text_var_cancer_pred.set(form_to_string(response.json()))
-                            self.label_text_cancer_pred.fg = "blue"
+                            self.label_text_cancer_pred["fg"] = "green"
                     else:
                         print("Failed to upload image.")
         except Exception as e:
@@ -97,10 +97,10 @@ class PredictionsWindow(tk.Tk):
                     if response.status_code == 200:
                         if "error" in response.json():
                             self.text_var_fracture_pred.set("error, try again")
-                            self.label_text_fracture_pred.fg = "red"
+                            self.label_text_fracture_pred["fg"] = "red"
                         else:
                             self.text_var_fracture_pred.set(form_to_string(response.json()))
-                            self.label_text_fracture_pred.fg = "blue"
+                            self.label_text_fracture_pred["fg"] = "green"
                     else:
                         print("Failed to upload image.")
         except Exception as e:
@@ -117,10 +117,10 @@ class PredictionsWindow(tk.Tk):
                     if response.status_code == 200:
                         if "error" in response.json():
                             self.text_var_pneumo_pred.set("error, try again")
-                            self.label_text_pneumo_pred.fg = "red"
+                            self.label_text_pneumo_pred["fg"] = "red"
                         else:
                             self.text_var_pneumo_pred.set(form_to_string(response.json()))
-                            self.label_text_pneumo_pred.fg = "blue"
+                            self.label_text_pneumo_pred["fg"] = "green"
                     else:
                         print("Failed to upload image.")
         except Exception as e:
